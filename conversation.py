@@ -23,7 +23,7 @@ class Conversation():
             game.ping(30, 60)
             self.send_reply(line, "Waiting 30 seconds...")
         elif cmd == "engine":
-            self.send_reply(line, "Stockfish dev running on heroku server")
+             self.send_reply(line, "{} LICHESS-BOT by kingnandi (v{})".format(self.engine.name(), self.version))
         elif cmd == "eval":
             stats = self.engine.get_stats()
             self.send_reply(line, ", ".join(stats))
