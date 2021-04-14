@@ -10,6 +10,8 @@ engine:                      # engine settings
     enabled: true           # activate polyglot book
     book:
       standard: # list of book file paths for variant standard
+        - Cerebellum3Merge.bin
+        - Perfect2021.bin
         - komodo.bin
         - elo3300.bin
 #      atomic: # list of book file paths for variant atomic
@@ -29,8 +31,8 @@ option name Hash type spin : 33554432
 option name Ponder type check : false
 option name MultiPV type spin : 1
 option name Skill Level type spin : 20
-option name Move Overhead type spin : 10
-option name Slow Mover type spin : 50
+option name Move Overhead type spin : 3000
+option name Slow Mover type spin : 1
 option name nodestime type spin : 0
 option name UCI_Chess960 type check : false
 option name UCI_AnalyseMode type check : false
