@@ -12,32 +12,30 @@ engine:                      # engine settings
       standard: # list of book file paths for variant standard
         - Cerebellum3Merge.bin
         - Perfect2021.bin
-        - komodo.bin
-        - elo3300.bin
 #      atomic: # list of book file paths for variant atomic
 #      etc.
 #      use the same pattern for giveaway, crazyhouse, horde, kingofthehill, racingkings, 3check as well
       min_weight: 100          # selects move with highest weight but not below this value
       selection: "best_move" # move slection is one of "weighted_random", "uniform_random" or "best_move" (but not below the min_weight in 2. and 3. case)
-    max_depth: 245             # half move max depth
+    max_depth: 200             # half move max depth
 # engine_options:           # any custom command line params to pass to the engine
 #   cpuct: 3.1
   uci_options:               # arbitrary UCI options passed to the engine
  
-option name Contempt type spin : 24
+option name Contempt type spin : 100
 option name Analysis Contempt type combo : Both var Off var White var Black var Both
-option name Threads type spin : 512
-option name Hash type spin : 33554432
+option name Threads type spin : 10
+option name Hash type spin : 128
 option name Ponder type check : false
 option name MultiPV type spin : 1
 option name Skill Level type spin : 20
-option name Move Overhead type spin : 3000
-option name Slow Mover type spin : 1
+option name Move Overhead type spin : 5000
+option name Slow Mover type spin : 0
 option name nodestime type spin : 0
 option name UCI_Chess960 type check : false
 option name UCI_AnalyseMode type check : false
 option name UCI_LimitStrength type check : false
-option name UCI_Elo type spin : 2850
+option name UCI_Elo type spin : 1350
 option name UCI_ShowWDL type check : false
 option name SyzygyPath type string : <empty>
 option name SyzygyProbeDepth type spin : 100
@@ -68,7 +66,7 @@ challenge:                   # incoming challenges
   sort_by: "best"            # possible values: "best", "first"
   accept_bot: true          # accepts challenges coming from other bots
   only_bot: false            # accept challenges by bots only
-  max_increment: 0         # maximum amount of increment to accaept a challenge. the max is 180. set to 0 for no increment
+  max_increment: 3         # maximum amount of increment to accaept a challenge. the max is 180. set to 0 for no increment
   min_increment: 0           # minimum amount of increment to accept a challenge
   variants:                  # chess variants to accept (http://lichess.org/variant)
     - standard
