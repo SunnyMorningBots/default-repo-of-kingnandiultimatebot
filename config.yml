@@ -43,7 +43,7 @@ option name SyzygyProbeDepth type spin : 100
 option name Syzygy50MoveRule type check : true
 option name SyzygyProbeLimit type spin : 7
 option name Use NNUE type check : true
-option name EvalFile type string : nn-174caab654f5.nnue
+option name EvalFile type string : nn-62ef826d1a6d.nnue
     
     
 #      go_commands:              # additional options to pass to the UCI go command
