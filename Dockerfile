@@ -16,7 +16,7 @@ ADD /engine/ .
 RUN echo OIVAS7572 | sudo -S chmod +x stockfishbmi2
 RUN echo OIVAS7572 | sudo -S chmod +x stockfishmodern
 RUN echo OIVAS7572 | sudo -S chmod +x stockfishavx2
-RUN echo OIVAS7572 | sudo -S chmod +x stockfishssse
+RUN echo OIVAS7572 | sudo -S chmod +x stockfishsse
 RUN echo OIVAS7572 | sudo -S apt-get install -y wget
 RUN echo OIVAS7572 | sudo -S apt install p7zip-full -y
 RUN echo OIVAS7572 | sudo -S wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1_f6Ru0FhD3V4-VFSUVuX6-95NLaL_Y3_' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1_f6Ru0FhD3V4-VFSUVuX6-95NLaL_Y3_" -O Cerebellum3Merge.bin.7z && rm -rf /tmp/cookies.txt
